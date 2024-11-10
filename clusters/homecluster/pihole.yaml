@@ -46,4 +46,13 @@ spec:
       enabled: true
     DNS1: 1.1.1.1
     DNS2: 1.0.0.1
+    dnsmasq:
+      customDneEntries:
+        - address=/homecluster.lan/192.168.1.43
+        - address=/homecluster.lan/192.168.1.44
+        - address=/homecluster.lan/192.168.1.45
+        - address=/homecluster.lan/192.168.1.46
+        - address=/homecluster.lan/192.168.1.47
+      customCnameEntries:
+        - cname=pi.hole,homecluster.lan
     
