@@ -30,16 +30,18 @@ spec:
         namespace: pihole
       interval: 10m
   values:
+    serviceWeb:
+      http:
+        port: 8080
+      https:
+        enabled: false
+      type: LoadBalancer
     serviceDns:
         mixedService: true
         type: LoadBalancer
     serviceDhcp:
         enabled: false
     virtualHost: pi.hole
-    ingress:
-        enabled: true
-        hosts:
-          - pi.hole
     admin:
       existingSecret: admin # To be added manually after initial bootstrapping
     doh:
