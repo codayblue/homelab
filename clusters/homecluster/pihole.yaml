@@ -35,11 +35,11 @@ spec:
         type: LoadBalancer
     serviceDhcp:
         enabled: false
-    virtualHost: rancher.local
+    virtualHost: pi.hole
     ingress:
         enabled: true
         hosts:
-          - rancher.local
+          - pi.hole
     admin:
       existingSecret: admin # To be added manually after initial bootstrapping
     doh:
