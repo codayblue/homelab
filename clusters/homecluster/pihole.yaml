@@ -30,18 +30,16 @@ spec:
         namespace: pihole
       interval: 10m
   values:
-    serviceWeb:
-      http:
-        port: 8080
-      https:
-        enabled: false
-      type: LoadBalancer
     serviceDns:
         mixedService: true
         type: LoadBalancer
     serviceDhcp:
         enabled: false
-    virtualHost: pi.hole
+    virtualHost: pihole.homecluster.lan
+    ingress:
+        enabled: true
+        hosts:
+          - pihole.homecluster.lan
     admin:
       existingSecret: admin # To be added manually after initial bootstrapping
     doh:
@@ -55,6 +53,4 @@ spec:
         - address=/homecluster.lan/192.168.1.45
         - address=/homecluster.lan/192.168.1.46
         - address=/homecluster.lan/192.168.1.47
-      customCnameEntries:
-        - cname=pi.hole,homecluster.lan
     
