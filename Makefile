@@ -1,7 +1,8 @@
 REPO=ssh://git@github.com/codayblue/homelab.git
 CLUSTER=homecluster
+LOCAL_CONTEXT=rancher-desktop
 
-.PHONY: bootstrap generate
+.PHONY: bootstrap generate local
 bootstrap: 
 	flux bootstrap git \
 		--url=$(REPO) \
@@ -15,4 +16,6 @@ generate:
 	ssh-keygen -f secrets/$(CLUSTER)
 	@echo "Add pub key to github repo for bootstrapping"
 	@cat secrets/$(CLUSTER).pub
-	
+
+local:
+	@flux install --context $(LOCAL_CONTEXT)
