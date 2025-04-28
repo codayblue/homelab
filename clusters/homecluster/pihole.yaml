@@ -55,4 +55,6 @@ spec:
         - address=/homecluster.lan/192.168.1.45
         - address=/homecluster.lan/192.168.1.46
         - address=/homecluster.lan/192.168.1.47
+      customSettings:
+        - except-interface=nonexisting
     
