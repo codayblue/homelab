@@ -49,10 +49,13 @@ spec:
       existingSecret: admin # To be added manually after initial bootstrapping
     doh:
       enabled: true
+    persistentVolumeClaim:
+      enabled: true
     DNS1: 1.1.1.1
     DNS2: 1.0.0.1
     dnsmasq:
       customDnsEntries:
+        - address=/hos.lan/192.168.1.31
         - address=/homecluster.lan/192.168.1.43
         - address=/homecluster.lan/192.168.1.44
         - address=/homecluster.lan/192.168.1.45
