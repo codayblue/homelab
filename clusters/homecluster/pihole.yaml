@@ -32,9 +32,6 @@ spec:
   values:
     image:
       tag: "2025.04.0"
-    adlists:
-      - https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt
-      - https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
     serviceDns:
         mixedService: true
         type: LoadBalancer
