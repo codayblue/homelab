@@ -45,11 +45,11 @@ spec:
     admin:
       existingSecret: admin # To be added manually after initial bootstrapping
     doh:
-      enabled: true
+      enabled: false
     persistentVolumeClaim:
       enabled: true
-    DNS1: 1.1.1.1
-    DNS2: 1.0.0.1
+    DNS1: 9.9.9.9
+    DNS2: 149.112.112.112
     dnsmasq:
       customDnsEntries:
         - address=/hos.lan/192.168.1.31
