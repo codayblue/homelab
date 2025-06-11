@@ -28,6 +28,8 @@ spec:
         name: zot-repo
       version: 0.1.72
   values:
+    image:
+      repository: ghcr.io/project-zot/zot-linux-arm64
     persistence: true
     pvc:
       create: true
