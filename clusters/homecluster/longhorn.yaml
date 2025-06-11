@@ -19,6 +19,7 @@ metadata:
   name: longhorn-release
   namespace: longhorn-system
 spec:
+  timeout: 30m0s
   chart:
     spec:
       chart: longhorn
