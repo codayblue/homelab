@@ -1,0 +1,37 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: zot
+---
+apiVersion: source.toolkit.fluxcd.io/v1
+kind: HelmRepository
+metadata:
+  name: zot-repo
+  namespace: zot
+spec:
+  interval: 1m0s
+  url: http://zotregistry.dev/helm-charts
+---
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: zot-release
+  namespace: zot
+spec:
+  chart:
+    spec:
+      chart: zot
+      reconcileStrategy: ChartVersion
+      sourceRef:
+        kind: HelmRepository
+        name: zot-repo
+      version: 0.1.72
+  values:
+    persistence: true
+    pvc:
+      create: true
+      storageClassName: longhorn
+    service:
+      type: LoadBalancer
+  interval: 1m0s
