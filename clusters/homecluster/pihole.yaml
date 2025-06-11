@@ -23,15 +23,13 @@ spec:
   chart:
     spec:
       chart: pihole
-      version: '2.29.1'
+      version: '2.31.0'
       sourceRef:
         kind: HelmRepository
         name: pihole
         namespace: pihole
       interval: 10m
   values:
-    image:
-      tag: "2025.04.0"
     serviceDns:
         mixedService: true
         type: LoadBalancer
@@ -48,6 +46,7 @@ spec:
       enabled: false
     persistentVolumeClaim:
       enabled: true
+      storageClass: longhorn
     DNS1: 9.9.9.9
     DNS2: 149.112.112.112
     dnsmasq:
