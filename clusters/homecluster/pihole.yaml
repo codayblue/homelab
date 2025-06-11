@@ -30,6 +30,8 @@ spec:
         namespace: pihole
       interval: 10m
   values:
+    image:
+      tag: "2025.06.1"
     serviceDns:
         mixedService: true
         type: LoadBalancer
