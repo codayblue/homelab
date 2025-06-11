@@ -37,7 +37,7 @@ metadata:
   namespace: longhorn-system
 spec:
   rules:
-  - host: rancher.homecluster.lan
+  - host: longhorn.homecluster.lan
     http:
       paths:
       - path: /
