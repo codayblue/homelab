@@ -1,4 +1,5 @@
 REPO=ssh://git@github.com/codayblue/homelab.git
+TYPE=clusters
 CLUSTER=homecluster
 LOCAL_CONTEXT=rancher-desktop
 
@@ -8,7 +9,7 @@ bootstrap:
 		--url=$(REPO) \
 		--branch=main \
 		--private-key-file=secrets/$(CLUSTER) \
-		--path=clusters/$(CLUSTER)
+		--path=$(TYPE)/$(CLUSTER)
 
 generate:
 	@echo "Generating cluster keys..."
