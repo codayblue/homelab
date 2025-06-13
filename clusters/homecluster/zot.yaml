@@ -10,7 +10,7 @@ metadata:
   name: zot-repo
   namespace: zot
 spec:
-  interval: 1m0s
+  interval: 10m0s
   url: http://zotregistry.dev/helm-charts
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2

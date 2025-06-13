@@ -10,7 +10,7 @@ metadata:
   name: pihole
   namespace: pihole
 spec:
-  interval: 1m
+  interval: 10m
   url: https://mojo2600.github.io/pihole-kubernetes/
 ---
 apiVersion: helm.toolkit.fluxcd.io/v2
