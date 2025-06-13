@@ -35,5 +35,19 @@ spec:
       create: true
       storageClassName: longhorn
     service:
-      type: LoadBalancer
+      type: ClusterIp
+    ingress:
+      enabled: true
+      annotations:
+        cert-manager.io/cluster-issuer: ca
+      className: "traefik"
+      pathtype: ImplementationSpecific
+      hosts:
+        - host: registry.homecluster.lan
+          paths:
+            - path: /
+      tls:
+        - secretName: registry-certificate
+          hosts:
+            - registry.homecluster.lan
   interval: 1m0s
