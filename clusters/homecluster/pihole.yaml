@@ -49,7 +49,7 @@ spec:
     persistentVolumeClaim:
       enabled: true
       storageClass: longhorn
-      size: "1Gi"
+      size: "4Gi"
     DNS1: 9.9.9.9
     DNS2: 149.112.112.112
     dnsmasq:
