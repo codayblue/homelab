@@ -31,7 +31,7 @@ spec:
       interval: 10m
   values:
     image:
-      tag: "2025.06.1"
+      tag: "2025.08.0"
     serviceDns:
         mixedService: true
         type: LoadBalancer
