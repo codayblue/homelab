@@ -48,8 +48,9 @@ spec:
       enabled: true
       storageClass: longhorn
       size: "4Gi"
-    DNS1: 9.9.9.9
-    DNS2: 149.112.112.112
+    # Configure through web ui
+    DNS1: false 
+    DNS2: false
     dnsmasq:
       customDnsEntries:
         - address=/hos.lan/192.168.1.31
