@@ -26,7 +26,7 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: zot-repo
-      version: 0.1.72
+      version: 0.1.83
   values:
     image:
       repository: ghcr.io/project-zot/zot-linux-arm64
