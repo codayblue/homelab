@@ -35,7 +35,7 @@ spec:
       create: true
       storageClassName: longhorn
     service:
-      type: ClusterIP
+      type: LoadBalancer
     ingress:
       enabled: true
       annotations:
